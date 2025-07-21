@@ -1,9 +1,9 @@
 // src/App.tsx - The new, merged application root
 
 // --- Imports from the original .tsx file (shadcn, react-query) ---
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
+import { Toaster } from "../components/ui/toaster";
+import { Toaster as Sonner } from "../components/ui/sonner";
+import { TooltipProvider } from "../components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -18,19 +18,19 @@ import Footer from './layouts/Footer';
 import Loader from './layouts/Loader';
 
 // --- Combined list of all your page components ---
-import Index from "./pages/Index"; // Or Home
+import Index from "./pages/Home"; // Or Home
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import MyOrders from "./pages/MyOrders";
 import MyAccount from "./pages/MyAccount";
 import Auth from "./pages/Auth";
-import ProductPage from "./pages/ProductPage"; // Or SingleProduct
+
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Shipping from "./pages/Shipping";
 import Privacy from "./pages/Privacy";
-import PaymentSuccess from "./pages/PaymentSucess";
+
 
 const queryClient = new QueryClient();
 
@@ -79,7 +79,7 @@ const AppRoutes = () => {
       <Route path="/about" element={<About />} />
       <Route path="/shipping" element={<Shipping />} />
       <Route path="/privacy" element={<Privacy />} />
-      <Route path="/payment-success" element={<PaymentSuccess />} />
+      
     </Routes>
   );
 };
